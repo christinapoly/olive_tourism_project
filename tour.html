@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Olive Grove Tour</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--HEADER-->
+  <section> <!--background image of the menu-->
+    <style>
+      .header {
+        background-image: url(img/bottles.png);
+        background-repeat: no-repeat;
+        width: 1920px;
+        padding-bottom: 150px;
+        padding-right: 50px;
+      }
+    </style>
+
+    <section class="header">
+      <img class="logo" src="img/logowhite.png" alt="logo" width="196px" height="152px">
+      
+  
+      <div class="menu">
+          <ul>
+              <li><a href="#">Main</a></li>
+              <li><a href="#">Olive Tourism</a></li>
+              <li><a href="#">Experiences</a></li>  
+              <li><a href="#">West Peloponnese</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+
+      <img src="img/Globe.png" class="lang" alt="languages">
+      
+      
+    </section>
+  </section>
+
+  <!--SECTION 1 (DESCRIPTION)-->
+  
+  <section class="tour_section1">
+    <div class="olive_tour"><h1>Olive Tour in the Western Peloponnese</h1></div>
+    <div class="tour_par1">
+      <p>Embark on a journey through the heart of the Western Peloponnese with our Olive Grove Experience, hosted by a local family.<br><br>Start by strolling through the family-owned olive grove, where ancient trees hold stories of the past. The hosts will guide you through the production process, from harvesting to bottling. You will explore the traditional oil press behind the scenes, witnessing the craft of extracting olive oil. Engage in discussions about marketing and labelling, understanding the family's dedication to quality. Enjoy a tasting session featuring different olive varieties, each representing the region's unique terroir. Our hosts, more than guides, are here to answer questions and share the details of their trade.<br><br>Join conversations about weather conditions, soil intricacies, and plant interactions that shape the flavours of their olive oils. It's not just a tour; it's an opportunity to learn about olive cultivation from a local family passionate about their craft.</p>
+    </div>
+    <div class="tour_schedule">
+      <h1>Schedule and Content</h1>
+      <ul>
+        <li>Brief overview of the family's history and connection to olive cultivation.</li>
+        <li>Guided Walk Through the Olive Grove - Explore the ancient olive trees and learn about their unique characteristics.</li>
+        <li>Production Process Insights</li>
+        <li>Behind-the-scenes tour of the traditional oil press.</li>
+        <li>Marketing and labelling - Learn about the significance of authenticity.</li>
+        <li>Sample various olive varieties and olive oils and discuss the flavour profiles and characteristics of each.</li>
+        <li>Learn about soil composition and weather conditions - What is their impact on olive cultivation?</li>
+        <li>Discussion - Q&A</li>
+      </ul>
+
+      <p>Note: The schedule is subject to minor adjustments based on weather conditions.</p>
+    </div>
+  </section>
+
+
+  <!--SECTION 2 (IMAGES)-->
+  <div class="collage"></div>
+  <div class="tour_info"></div>
+  <!--SECTION 3 (TESTIMONIALS)-->
+  <div class="testimonials_tour">
+    <h1>What other travellers think about this experience...</h1>
+
+    <div class="divs">
+      <div class="div1">
+        <img src="img/testimonial (3).png" alt="testimonial">
+        <p>The Olive Grove Tour in the Western Peloponnese was a truly enchanting experience. From the warm welcome by the local family to the immersive stroll through ancient groves, every moment felt like a journey through history!</p>
+        <h3>Margot (France), 2023</h3>
+      </div>
+      <div class="div2">
+        <img src="img/testimonial (4).png" alt="testimonial">
+        <p>Amid the challenges of the pandemic, the Olive Grove Tour in the Western Peloponnese provided a much-needed escape into the serene world of olive cultivation. The family's dedication to safety measures, coupled with their warm hospitality, made this experience not only educational but also a comforting retreat during uncertain times. Thank you for this experience!</p>
+        <h3>Helen (Greece), 2020</h3>
+      </div>
+    </div>
+    <button><a href="#">Read more...</a></button>
+  </div>
+
+  <!--SECTION 4 (MAP)-->
+  <div class="mapdiv">
+    <div class="tourmap_text">
+      <h1>How To Get There</h1>
+      <p class="text_tour">Please note that the only viable mode of transportation to access the olive grove is by car. For detailed information on car rental options and recommendations, kindly refer to the Transportation section. We recommend planning your visit accordingly to ensure a smooth and convenient journey.</p>
+      <button class="map_btn"><a href="https://maps.app.goo.gl/15AbrWNza1aLZFjXA">Click here to view the Location on Google Maps</a></button>
+      <p class="directions">For detailed directions, please refer to the provided map or contact us for further assistance.</p>
+    </div>
+    <div id="map"></div>
+  </div>
+
+  <!--SECTION 5 (FAQ)-->
+  <div class="faq_square">
+    <div class="faq_divs">
+      <div class="faq_title">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+      <div class="faq_text">
+        <p><b>1. How do I book a tour of the olive grove?</b><br>
+          Booking is simple! Visit the website of the olive grove or contact us directly through the provided channels. Our staff will gladly assist you.<br><b>
+          2. What is included in the tour?</b><br>
+          The tour encompasses a leisurely stroll through the family-owned olive grove, a guided visit to an oil press, engaging discussions on the production process, marketing and labelling and a delightful tasting and food pairing session featuring various olive varieties and oils.<br>
+          <b>3. Are pets allowed on the tour?</b><br>
+          Unfortunately, for the well-being of the grove and other visitors, pets are not permitted on the tour.<br>
+          <b>4. Is the tour wheelchair accessible?</b><br>
+          We strive to make our tours as accessible as possible. Please contact us in advance to discuss specific needs and we will do our best to accommodate.<br>
+          5. How long does the tour last? <br>
+          The duration of the tour is approximately 90 minutes. However, the timing may vary based on group size and participant engagement.<br>
+          <b>6. Can I purchase olive oil products during the tour?</b> <br>
+          Absolutely! There will be a selection of high-quality olive oil products available for purchase. <br>
+          <b>7. What happens in case of inclement weather?</b><br>
+          The tour will proceed rain or shine. In the event of severe weather conditions, we will make necessary adjustments to ensure a safe and enjoyable experience.<br>
+          <b>8. Is there parking available at the grove?</b><br>
+          Yes, there is a parking space available for visitors arriving by car. Please refer to the Transportation section for more information on reaching the grove.</p>
+      </div>
+    </div>
+  </div>
+  <!--FOOTER-->
+
+   <!--FOOTER-->
+   <section class="footer">
+    <div class="address">
+      <h1>Head Quarter</h1>
+      <p>Konstantinoupoleos str. 46<br> Patras, 25002, Greece</p>
+    </div>
+
+    <div class="social_footer">
+      <a href="www.facebook.com"><img src="img/Facebook.png" alt="facebook_icon"></a>
+      <a href="www.instagram.com"><img src="img/Instagram.png" alt="instagram_icon"></a>
+      <a href="www.linkedin.com"><img src="img/YouTube.png" alt="linkedin_icon"></a>
+    </div>
+
+    <div class="footer_links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Career</a>
+      <a href="#">FAQ</a>
+    </div>
+
+   
+    <div class="rect_info">
+      <h1>Join the OliveOdyssey Community</h1>
+      <div class="btn">
+        <input class="input" type="email" placeholder="Email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+
+
+
+<script src="script.js"></script> 
+</body>
+</html>

@@ -1,0 +1,874 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+}
+
+/* COLORS */
+:root {
+   --black: #131313;
+   --white: #F9F9F9;
+   --green: #6B7066;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  width: 1800px;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 8%;
+  margin-top: 20px;
+}
+
+.menu {
+  width: 70%;
+  margin-left: 300px;
+
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  text-decoration: none;
+  color: var(--white);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+}
+
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
+.footer {
+  background-image: url(img/footer_bg.png);
+  color: var(--white);
+  height: 413px;
+  width: 1920px;
+  position:relative;
+  overflow: hidden;
+}
+
+.address {
+  font-size: 24px;
+  padding-top: 90px;
+  padding-left: 130px;
+  line-height: 50px ;
+  letter-spacing: 3px;
+}
+
+.social_footer {
+  display: flex;
+  padding-left: 130px;
+  margin-top: 54px;
+
+}
+
+.social_footer img {
+  width: 50px;
+  margin-right: 60px;
+}
+
+.footer_links {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  position: absolute;
+  top: 75px;
+  left: 600px;
+}
+
+.footer_links a {
+  color: var(--white);
+  line-height: 73px;
+  font-size: 24px;
+}
+
+
+.rect_info {
+  position: absolute;
+}
+
+.rect_info h1 {
+  position: absolute;
+  font-size: 32px;
+  margin-left: 1000px;
+  margin-top: -150px;
+}
+
+.input {
+  position: absolute;
+  margin-left: 1000px;
+  margin-top: -90px;
+  font-size: 24px;
+  width: 560px;
+  height: 68px;
+  background-color: var(--green);
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.input::placeholder {
+  color: lightgray;
+  padding: 30px;
+}
+
+.rect_info button {
+  position: relative;
+  width: 200px;
+  height: 68px;
+  font-size: 24px;
+  margin-left: 1600px;
+  bottom: 90px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* MAIN PAGE */
+/* MAIN PAGE - SECTION 1 */
+
+#bg-img {
+  background-image: url(img/bg.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: 1143px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.title {
+  margin-top: 140px;
+  padding-left: 812.5px;
+  font-size: 48px;
+  color: var(--white);
+  
+}
+
+.subtitle {
+  padding-top: 50px;
+  padding-left: 342px;
+  font-size: 110px;
+  color: var(--white);
+}
+
+.plan_btn {
+  width: 467px;
+  height: 79px;
+  background-color: rgba(0, 0, 0, 0.46);
+  margin-top: 320px;
+  margin-left: 726px;
+  color: var(--white);
+  font-size: 36px;
+}
+
+.social {
+  flex-direction: column;
+  display: flex;
+  margin-left: 67px;
+  margin-top: -170px;
+
+}
+
+#fb, #insta, #yt {
+  width: 48px;
+  margin-bottom: 30px;
+}
+
+
+/* MAIN PAGE - SECTION 2 */
+
+.section2 {
+  background-color: var(--black);
+}
+
+.h1_serv {
+  color: var(--white);
+  padding-top: 150px;
+  padding-bottom: 50px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.services {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.services > img {
+  margin: 70px;
+}
+
+.h1_facts {
+  color: var(--white);
+  text-align: center;
+  margin-top: 280px;
+  font-size: 40px;
+}
+
+.h2_facts {
+  color: var(--green);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.facts {
+  display: flex;
+  justify-content: center;
+}
+
+.facts > img {
+  margin: 100px;
+  padding-bottom: 50px;
+}
+
+/* MAIN PAGE - SECTION 3 */
+
+.section3 {
+  background-color: var(--green);
+}
+
+.h1_words {
+  text-align: center;
+  font-size: 40px;
+  padding-top: 140px;
+  padding-bottom: 75px;
+}
+
+.carousel_div {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.carousel {
+  display: flex;
+  animation: scroll 30s infinite;
+}
+
+.card {
+  scroll-snap-align: center;
+  position: relative;
+  margin-right: 125px;
+  margin-bottom: 200px;
+}
+
+/* carousel animation keyframes */
+
+@keyframes scroll {
+  0% { transform: translateX(0%); }
+  33.33% { transform: translateX(-50%); }
+  66.66% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+/* MAIN PAGE - SECTION 4 */
+
+.section4 {
+  background-color: var(--white);
+}
+
+.h1_plan {
+  color: var(--black);
+  text-align: center;
+  font-size: 40px;
+  padding-top: 85px;
+}
+
+.h2_plan {
+  color: var(--black);
+  text-align: center;
+  font-size: 24px;
+  padding-top: 30px;
+}
+
+.icons4 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 190px;
+  margin-left: 290px;
+}
+
+.icons4 > img {
+  width: 100px;
+  margin-bottom: 48px;
+}
+
+.par {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin-left: 430px;
+  margin-top: -445px;
+}
+
+.par1, .par2, .par3 {
+  max-width: 350px;
+  text-align: justify;
+  padding-bottom: 55px;
+}
+
+.par h1 {
+  font-size: 24px;
+}
+
+.par p {
+  font-size: 20px;
+}
+
+.preview {
+  padding-left: 1050px;
+  margin-top: -650px;
+}
+
+/* ERROR PAGE */
+
+#bg-img-error {
+  background-image: url(img/bg-error.png);
+  width: 1920px;
+  height: 1080px;
+  background-size:cover;
+  background-repeat: no-repeat;
+  }
+
+.error {
+  color: var(--white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 1400px;
+  height: 620px;
+  top: 100px;
+  left: 350px;
+}
+
+.error h1 {
+  font-size: 96px;
+  margin-bottom: 50px;
+}
+
+.error p {
+  font-size: 64px;
+  width: 1238px;
+}
+
+.error h2 {
+  font-size: 36px;
+  margin-top: 145px;
+  font-weight: 100;
+}
+
+.error a {
+  color: var(--white);
+}
+
+/* OLIVE GROVE TOUR PAGE */
+
+/* OLIVE GROVE TOUR - SECTION 1 */
+
+.olive_tour {
+  font-size: 45px;
+  margin-top: -220px;
+  color: var(--white);
+  z-index: 1000;
+  text-align: center;
+}
+
+.tour_section1 {
+  background-color: var(--black);
+  width: 1920px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+  padding-left: 100px;
+}
+
+.tour_par1 {
+  position: absolute;
+  color: var(--white);
+  margin: 60px;
+  width: 1600px;
+  margin-top: 150px;
+  font-size: 28px;
+}
+
+.tour_schedule {
+  color: var(--white);
+  margin-top: 600px;
+  margin-left: 60px;
+  font-size: 28px;
+}
+
+.tour_schedule h1 {
+  color: var(--green);
+  margin: 20px;
+}
+
+.tour_schedule ul {
+  margin-left: 50px;
+}
+
+.tour_schedule > p {
+  margin-top: 30px;
+}
+
+
+/* OLIVE GROVE TOUR - SECTION 2 */
+
+.collage {
+  background-image: url(img/collage.png);
+  width: 1920px;
+  height: 1700px;
+}
+
+.tour_info {
+  background-image: url(img/tour_info.png);
+  width: 1920px;
+  height: 1100px;
+  background-repeat: no-repeat;
+}
+
+
+/* OLIVE GROVE TOUR - SECTION 3 */
+
+.testimonials_tour {
+  background-color: var(--black);
+  width: 1920px;
+  height: 1000px;
+}
+
+.testimonials_tour > h1 {
+  color: var(--green);
+  text-align: center;
+  padding-top: 150px;
+}
+
+.divs {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 160px;
+}
+
+.div1, .div2 {
+  width: 740px;
+  height: 300px;
+  background-color: var(--green);
+  text-align: center;
+  color: var(--white);
+}
+
+.div1 > img, .div2 > img {
+  width: 165px;
+  top: -40px;
+  position: relative;
+}
+
+.div1 > p, .div2 > p {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+  text-align: justify;
+}
+
+.div1 > h3, .div2 > h3 {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.testimonials_tour > button {
+  background-color: var(--black);
+  border: 0 solid black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 22px;
+  position: relative;
+  top: 100px;
+  left: 1650px;
+}
+
+.testimonials_tour a {
+  color: var(--white);
+}
+
+
+/* OLIVE GROVE TOUR - SECTION 4 */
+
+.mapdiv {
+  background-color: var(--black);
+  width: 1920px;
+  height: 700px;
+  display: flex;
+}
+
+.tourmap_text {
+  color: var(--white);
+  width: 900px;
+}
+
+.tourmap_text h1 {
+  padding-top: 50px;
+  color: var(--green);
+  text-align: center;
+}
+
+.text_tour {
+  width: 500px;
+  text-align: justify;
+  margin-top: 50px;
+  margin-left: 200px;
+  line-height: 35px;
+  font-size: 20px;
+}
+
+.directions {
+  width: 900px;
+  margin-top: 50px;
+  text-align: center;
+  font-style: italic;
+  color: gray;
+}
+
+.map_btn {
+  background-color: var(--black);
+  border: 1px solid var(--white);
+  margin-top: 100px;
+  margin-left: 230px;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.map_btn a {
+  color: var(--white);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+}
+
+/* OLIVE TOUR - MAP */
+
+#map { 
+  position: relative; 
+  bottom: 20px;
+  width: 700px; 
+  height: 450px;
+  margin-top: 80px;
+  margin-left: 150px;  
+}
+
+#marker {
+  background-image: url(img/Location.png);
+  background-size: cover;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  cursor: pointer;
+  }
+   
+  .mapboxgl-popup {
+  max-width: 200px;
+  }
+
+
+/* OLIVE GROVE TOUR - SECTION 5 */
+
+.faq_square {
+  background-color: var(--black);
+  height: 1100px;
+  display:flex;
+}
+
+.faq_divs {
+  background-image: url(img/tour_faq_bg.png);
+  background-repeat: no-repeat;
+  align-content: center;
+  width: 1400px;
+  height: 930px;
+  text-align: justify;
+  margin: auto; 
+}
+
+.faq_title { 
+  color: var(--green);
+  margin-top: 30px;
+  margin-left: 100px;
+  }
+
+.faq_text {
+  color: var(--white);
+  margin-top: 50px;
+  line-height: 40px;
+  padding: 0 100px;
+  font-size: 20px;
+}
+
+
+/* EXPERIENCES PAGE */
+
+.experience {
+  font-size: 40px;
+  margin-top: -150px;
+  padding-bottom: 40px;
+  color: var(--white);
+  z-index: 1000;
+  text-align: center;
+}
+
+.exp_section1 {
+  background-color: var(--black);
+  width: 1920px;
+  height: 1000px;
+  padding-bottom: 150px;
+  padding-left: 100px;
+}
+
+/* EXPERIENCES SECTION 1 - MAP*/
+
+.exp_map_square {
+  display: flex;
+  
+}
+
+.exp_map_text p {
+  position: absolute;
+  font-size: 50px;
+  color: var(--white);
+  bottom: 400px;
+  left: 100px;
+  letter-spacing: 5px;
+
+}
+
+/* Map */
+#exp_map {
+  position: absolute;
+  top: 400px;
+  left: 800px;  
+  width: 1000px;
+  height: 550px;
+}
+
+/*Pop-up*/
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 15px;
+  background-color: var(--green);
+  color: white;
+}
+
+/*Markers*/
+
+.marker-tour {
+  background-image: url(img/Location.png);
+  background-color: var(--bg-color);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: help;
+}
+
+.marker-shop {
+  background-image: url(img/Location.png);
+  background-color: var(--bg-color);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: help;
+}
+
+.marker-food {
+  background-image: url(img/Location.png);
+  background-color: var(--bg-color);
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: help;
+}
+
+/* SECTION 2 - SWIPE EFFECT*/
+
+
+.section2_exp {
+  background-color: var(--black);
+  height: 1500px;
+}
+
+.h1_expwords {
+  font-size: 40px;
+  padding-top: 140px;
+  padding-bottom: 75px;
+  padding-left: 100px;
+  color: var(--white);
+  letter-spacing: 5px;
+  font-size: 40px;
+}
+
+.carousel_expdiv {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* CARDS */
+
+.carousel_exp {
+  display: flex;
+  animation: scroll 20s infinite;
+}
+
+.card_exp {
+  scroll-snap-align: center;
+  position: relative;
+  margin-right: 125px;
+  margin-bottom: 200px;
+}
+
+.box1, .box2, .box3 {
+  color: var(--black);
+  background-color: var(--white);
+  width: 845px;
+  margin: 100px;
+  border-radius: 15px;
+}
+
+.box1_text, .box2_text, .box3_text {
+  width: 800px;
+  height: 250px;
+  margin: 30px;
+  padding: 20px;
+  font-size: 30px;
+  letter-spacing: 3px;
+  text-align: justify;
+}
+
+.carousel_exp h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.carousel_exp a {
+  color: var(--white);
+}
+
+.carousel_exp button {
+  background-color: var(--green);
+  color: var(--white);
+  width: 300px;
+  padding: 15px;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-left: 480px;
+  margin-bottom: 30px;
+}
+
+/* carousel animation keyframes */
+
+@keyframes scroll {
+  0% { transform: translateX(5%); }
+  25% { transform: translateX(-30%); }
+  50% { transform: translateX(-60%); }
+  75% { transform: translateX(-30%); }
+  100% { transform: translateX(5%); }
+}
+
+
+/* HEADER RESPONSIVENESS - For mobile phones: */
+
+
+.menu-toggle {
+  display: none;
+  margin-left: 1600px;
+}
+
+.menu-toggle a, img {
+  font-size: 30px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.menu-toggle img {
+  margin-left: 140px;
+}
+
+.menu-toggle li {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.nav-toggle {
+  display: none;
+  width: 100px;
+  margin-right: 1%;   
+  padding-left: 86%;
+}
+
+.nav-toggle > button {
+  width: 100%;
+}
+
+.nav-toggle > button:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 370px) {
+  .menu {
+    display: none;
+}
+  .nav-toggle {
+    display: block;  
+}
+
+
+.error {
+  color: var(--white);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 200px;
+  top: 250px;
+  left: 10px;
+  margin-left: 100px;
+}
+
+.footer {
+  display: none;
+}
+
+
+.error h1 {
+  font-size: 64px;
+  margin-bottom: 50px;
+}
+
+.error p {
+  font-size: 40px;
+  max-width: 800px;
+}
+
+.error h2 {
+  font-size: 30px;
+  margin-top: 120px;
+}
+
+}

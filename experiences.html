@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore different olive tourism destinations in the Western Peloponnese!">
+  <title>Olive Tourism Experiences</title>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.0.1/mapbox-gl.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+  <!--HEADER-->
+  <section> <!--background image of the menu-->
+    <style>
+      .header {
+        background-image: url(img/top-bg.png);
+        background-repeat: no-repeat;
+        width: 1920px;
+        padding-bottom: 150px;
+        padding-right: 50px;
+      }
+    </style>
+
+    <section class="header">
+      <img class="logo" src="img/logowhite.png" alt="logo" width="196px" height="152px">
+      
+  
+      <div class="menu">
+          <ul>
+              <li><a href="#">Main</a></li>
+              <li><a href="#">Olive Tourism</a></li>
+              <li><a href="#">Experiences</a></li>  
+              <li><a href="#">West Peloponnese</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+
+      <img src="img/Globe.png" class="lang" alt="languages">
+      
+      
+    </section>
+
+    <!--TITLE-->
+  
+    <div class="experience"><h1>EXPERIENCES</h1></div>
+    <div class="exp_section1"></div>
+    
+  <!--SECTION 1 - MAP-->
+  <div class="exp_map_square">
+    <div class="exp_map_text"><p>We promise,<br> it won't get <br>boring.</p></div>
+    <div id="exp_map"></div>
+  </div>
+
+  <script>
+    //got the public token from the MapBox Website (this provides access to Mapbox resources )
+    mapboxgl.accessToken = 'pk.eyJ1IjoicG9seXpvZ29wIiwiYSI6ImNsb2RleXlndzA3N20yam12b2Y1YWJheDEifQ.lr19uXoW-aPJmyhslL_TcA';
+          
+      
+      //added the map to #map in the HTML
+      //selected one of the recommended styles for the map, added the coordinates for the center of the map and set the zoom level
+      const map2 = new mapboxgl.Map({
+          container: 'exp_map',
+          style: 'mapbox://styles/mapbox/dark-v11',
+          center: [ 21.58314520594386, 38.055300039094504],
+          zoom: 10.3
+      });
+
+      //created a JSON object to store data for each location
+      const geojson = {
+  type: 'FeatureCollection',
+  features: [ //array
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [21.40566777105378, 38.00852772794091]
+      },
+      properties: {
+        id: 'tour',
+        title: 'Olive Grove Tour',
+        description: 'Address:<br> Neapolis 27052, Elis Greece',
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [21.738303457671275, 38.253046493757246]
+      },
+      properties: {
+        id: 'shop',
+        title: 'Olive Shop',
+        description: 'Address: <br> Agiou Dionisiou 26, Patras'
+      }
+    },
+    {
+      type: 'Feature',
+      geometry: {
+        type: 'Point',
+        coordinates: [21.686227067087835, 38.18694775755508]
+      },
+      properties: {
+        id: 'food',
+        title: 'Olive Products Shop',
+        description: 'Address: <br> 28is Oktovriou, Roitika, 25002'
+      }
+    }    
+  ]
+};
+
+// add markers to map:
+for (const feature of geojson.features) {
+
+  // create a HTML element for each feature(location):
+  const el = document.createElement('div');
+  
+//create a class for each feature's id, in order to style it in css:
+  const customClass = `marker-${feature.properties.id}`; 
+  el.className = `${customClass}`;
+
+  // make a marker for each feature and add to the map
+  new mapboxgl.Marker(el)
+  .setLngLat(feature.geometry.coordinates)
+
+  .setPopup(
+    new mapboxgl.Popup({ offset: 25 }) // add popups that contain the title and the description of each feature
+      .setHTML(
+        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+      )
+  )
+  
+  .addTo(map2); //add everything to the map
+}
+
+  </script>
+
+
+  <!--SECTION 2 - SWIPE EFFECT-->
+
+  <section class="section2_exp">
+    <h1 class="h1_expwords">Most Popular Destinations:</h1>
+
+    <div class="carousel_expdiv">
+      <div class="carousel_exp">
+        <div class="box1">
+          <img src="img/salad.png" alt="olive_restaurant">
+          <div class="box1_text">
+            <h1>Local Olive Restaurant</h1>
+            <p>Exploring a local olive restaurant in Patras offers a down-to-earth culinary experience. Delight in dishes made with locally sourced olives and olive oils, all served in a cosy atmosphere. </p></div>
+          <button><a href="error.html">Learn more</a></button>
+        </div>
+        <div class="box2">
+          <img src="img/jars.png" alt="olive_products">
+          <div class="box2_text">
+            <h1>Olive Shop</h1>
+            <p>In the heart of Patras, there's a small local store that's a treasure trove of olive products. From olive oils to artisanal soaps and gourmet treats, this unpretentious shop showcases the best of the region's olive culture.</p></div>
+          <button><a href="error.html">Learn more</a></button>
+        </div>
+        <div class="box3">
+          <img src="img/tree.png" alt="olive_tree">
+          <div class="box3_text">
+            <h1>Olive Grove Tour</h1>
+            <p>Discover the West Elis with a practical and insightful olive grove tour, where you'll gain firsthand knowledge about the region's longstanding tradition of olive cultivation and production.</p></div>
+          <button><a href="tour.html">Learn more</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!--FOOTER-->
+  <section class="footer">
+    <div class="address">
+      <h1>Head Quarter</h1>
+      <p>Konstantinoupoleos str. 46<br> Patras, 25002, Greece</p>
+    </div>
+
+    <div class="social_footer">
+      <a href="www.facebook.com"><img src="img/Facebook.png" alt="facebook_icon"></a>
+      <a href="www.instagram.com"><img src="img/Instagram.png" alt="instagram_icon"></a>
+      <a href="www.linkedin.com"><img src="img/YouTube.png" alt="linkedin_icon"></a>
+    </div>
+
+    <div class="footer_links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Career</a>
+      <a href="#">FAQ</a>
+    </div>
+
+   
+    <div class="rect_info">
+      <h1>Join the OliveOdyssey Community</h1>
+      <div class="btn">
+        <input class="input" type="email" placeholder="Email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>
