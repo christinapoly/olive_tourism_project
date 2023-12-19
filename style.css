@@ -177,6 +177,12 @@
   margin-left: 726px;
   color: var(--white);
   font-size: 36px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.plan_btn a {
+  color: var(--white);
+  text-decoration: none;
 }
 
 .social {
