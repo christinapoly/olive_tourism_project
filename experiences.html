@@ -61,7 +61,7 @@
           
       
       //added the map to #map in the HTML
-      //selected one of the recommended styles for the map, added the coordinates for the center of the map and set the zoom level
+      //selected the dark style for the map, added the coordinates for the center of the map and set the zoom level according to the distance between the three hidden places
       const map2 = new mapboxgl.Map({
           container: 'exp_map',
           style: 'mapbox://styles/mapbox/dark-v11',
@@ -69,7 +69,7 @@
           zoom: 10.3
       });
 
-      //created a JSON object to store data for each location
+      //created a geoJSON object to store data for each one of the three locations
       const geojson = {
   type: 'FeatureCollection',
   features: [ //array
@@ -112,28 +112,28 @@
   ]
 };
 
-// add markers to map:
+// added markers to map:
 for (const feature of geojson.features) {
 
-  // create a HTML element for each feature(location):
+  // created an HTML element for each location:
   const el = document.createElement('div');
   
-//create a class for each feature's id, in order to style it in css:
+//created a class for each feature's id, in order to style it in css:
   const customClass = `marker-${feature.properties.id}`; 
   el.className = `${customClass}`;
 
-  // make a marker for each feature and add to the map
+  // made a marker for each feature and added to the map
   new mapboxgl.Marker(el)
   .setLngLat(feature.geometry.coordinates)
 
   .setPopup(
-    new mapboxgl.Popup({ offset: 25 }) // add popups that contain the title and the description of each feature
+    new mapboxgl.Popup({ offset: 25 }) // added popups that contain the title and the description of each location
       .setHTML(
         `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
       )
   )
   
-  .addTo(map2); //add everything to the map
+  .addTo(map2); //added everything to the map
 }
 
   </script>
@@ -180,9 +180,9 @@ for (const feature of geojson.features) {
     </div>
 
     <div class="social_footer">
-      <a href="www.facebook.com"><img src="img/Facebook.png" alt="facebook_icon"></a>
-      <a href="www.instagram.com"><img src="img/Instagram.png" alt="instagram_icon"></a>
-      <a href="www.linkedin.com"><img src="img/YouTube.png" alt="linkedin_icon"></a>
+      <a href="#"><img src="img/Facebook.png" alt="facebook_icon"></a>
+      <a href="#"><img src="img/Instagram.png" alt="instagram_icon"></a>
+      <a href="#"><img src="img/YouTube.png" alt="linkedin_icon"></a>
     </div>
 
     <div class="footer_links">
