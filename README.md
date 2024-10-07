@@ -1,6 +1,7 @@
 # olive_tourism_project
 
 This project is a website dedicated to olive tourism, using HTML, CSS, and JavaScript.
+
 This project serves as a personal exploration of web development skills, particularly in creating visually engaging and interactive websites. While it is still a work in progress, it lays the groundwork for further development.
 
 
